@@ -7,13 +7,25 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Scroll Progress Bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
   <!-- Light/Dark Toggle Button -->
   <div class="theme-switcher">
     <button id="theme-toggle">Dark Mode</button>
   </div>
 
-  <!-- Header with site title and navigation -->
-  <header>
+  <!-- Header with site title, banner image, and navigation -->
+  <header class="fade-in-section">
+    <!-- Banner Image -->
+    <img
+      src="images/banner.jpg"
+      alt="Banner: recycling bins and nature"
+      class="banner-image"
+    />
+
     <h1>Recycling Matters</h1>
     <nav>
       <ul>
@@ -21,14 +33,26 @@
         <li><a href="#benefits">Benefits</a></li>
         <li><a href="#ways">Ways to Recycle Cans</a></li>
         <li><a href="#more">More Resources</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <!-- Section: Why Recycling Is Important -->
-    <section id="why" class="section-accent">
-      <h2>Why Recycling Is Important</h2>
+    <section id="why" class="section-accent fade-in-section">
+      <h2>
+        <img src="images/why-icon.png" alt="Recycle icon" class="section-icon" />
+        Why Recycling Is Important
+      </h2>
+
+      <!-- Infographic/Image illustrating landfill vs. recycling -->
+      <img
+        src="images/landfill-vs-recycling.jpg"
+        alt="Infographic showing landfill versus recycling"
+        class="section-image"
+      />
+
       <p>
         Recycling reduces waste sent to landfills and incinerators, conserves
         natural resources (like timber, water, and minerals), prevents pollution,
@@ -44,30 +68,91 @@
     </section>
 
     <!-- Section: Benefits of Recycling (two-column list) -->
-    <section id="benefits">
-      <h2>Benefits of Recycling</h2>
+    <section id="benefits" class="fade-in-section">
+      <h2>
+        <img
+          src="images/benefits-icon.png"
+          alt="Benefits icon"
+          class="section-icon"
+        />
+        Benefits of Recycling
+      </h2>
       <ul class="two-column-list">
-        <li><strong>Conserves Resources:</strong> Gives paper, plastic, and metal
-          a second life instead of extracting new materials.</li>
-        <li><strong>Saves Energy:</strong> Manufacturing with recycled materials
-          often uses significantly less energy.</li>
-        <li><strong>Reduces Pollution:</strong> Cuts air and water pollution from
-          raw-material extraction and processing.</li>
-        <li><strong>Decreases Greenhouse Gases:</strong> Lower CO₂ emissions by
-          reducing the energy needed for production.</li>
-        <li><strong>Supports Local Economies:</strong> Creates jobs in recycling
-          and remanufacturing industries.</li>
-        <li><strong>Extends Landfill Life:</strong> Less trash means landfills
-          fill up more slowly, delaying the need for new sites.</li>
+        <li>
+          <img
+            src="images/energy-icon.png"
+            alt="Energy savings icon"
+            class="inline-icon"
+          />
+          <strong>Conserves Resources:</strong> Gives paper, plastic, and metal a
+          second life instead of extracting new materials.
+        </li>
+        <li>
+          <img
+            src="images/pollution-icon.png"
+            alt="Pollution reduction icon"
+            class="inline-icon"
+          />
+          <strong>Saves Energy:</strong> Manufacturing with recycled materials
+          often uses significantly less energy.
+        </li>
+        <li>
+          <img
+            src="images/economy-icon.png"
+            alt="Economic icon"
+            class="inline-icon"
+          />
+          <strong>Reduces Pollution:</strong> Cuts air and water pollution from
+          raw-material extraction and processing.
+        </li>
+        <li>
+          <img
+            src="images/benefits-icon.png"
+            alt="Benefits icon"
+            class="inline-icon"
+          />
+          <strong>Decreases Greenhouse Gases:</strong> Lower CO₂ emissions by
+          reducing the energy needed for production.
+        </li>
+        <li>
+          <img
+            src="images/economy-icon.png"
+            alt="Economic icon"
+            class="inline-icon"
+          />
+          <strong>Supports Local Economies:</strong> Creates jobs in recycling
+          and remanufacturing industries.
+        </li>
+        <li>
+          <img
+            src="images/benefits-icon.png"
+            alt="Benefits icon"
+            class="inline-icon"
+          />
+          <strong>Extends Landfill Life:</strong> Less trash means landfills fill
+          up more slowly, delaying the need for new sites.
+        </li>
       </ul>
     </section>
 
-    <!-- Section: Ways to Recycle Your Own Cans (colored columns) -->
-    <section id="ways" class="section-accent">
-      <h2>Ways to Recycle Your Own Cans</h2>
+    <!-- Section: Ways to Recycle Your Own Cans (two-column grid) -->
+    <section id="ways" class="section-accent fade-in-section">
+      <h2>
+        <img
+          src="images/cans-icon.png"
+          alt="Cans icon"
+          class="section-icon"
+        />
+        Ways to Recycle Your Own Cans
+      </h2>
       <div class="grid-two-cols">
         <div>
           <h3>1. Rinse and Dry</h3>
+          <img
+            src="images/rinse-cans.jpg"
+            alt="Person rinsing aluminum cans"
+            class="section-image"
+          />
           <p>
             Before tossing aluminum or steel cans into the recycling bin, give
             them a quick rinse to remove leftover residue. Dry them out so other
@@ -75,12 +160,22 @@
           </p>
 
           <h3>2. Crush to Save Space</h3>
+          <img
+            src="images/crush-cans.jpg"
+            alt="Crushed aluminum cans"
+            class="section-image"
+          />
           <p>
             Gently crush cans using your foot (or a can crusher). Flattened cans
             take up less room in your bin or curbside container.
           </p>
 
           <h3>3. Separate by Material</h3>
+          <img
+            src="images/sort-cans.jpg"
+            alt="Sorting cans into categories"
+            class="section-image"
+          />
           <p>
             If your local recycling program requires sorting, keep aluminum cans
             separate from steel/tin cans. Check with your municipality if they
@@ -96,35 +191,127 @@
 
           <h3>5. Check for Refund Programs</h3>
           <p>
-            In some states (like California, Oregon, and Michigan), you can return
-            empty aluminum or steel cans for a cash deposit (e.g., 5¢ or 10¢ per
-            can). Look up “bottle bill” in your state to see if you qualify.
+            In some states (like California, Oregon, and Michigan), you can
+            return empty aluminum or steel cans for a cash deposit (e.g., 5¢ or
+            10¢ per can). Look up “bottle bill” in your state to see if you
+            qualify.
           </p>
 
           <h3>6. DIY Projects</h3>
           <p>
-            Instead of recycling every can, consider upcycling a few—turn aluminum
-            cans into pencil holders, small planters, or lanterns. Just make sure
-            you still recycle any leftover scrap.
+            Instead of recycling every can, consider upcycling a few—turn
+            aluminum cans into pencil holders, small planters, or lanterns. Just
+            make sure you still recycle any leftover scrap.
           </p>
         </div>
       </div>
     </section>
 
     <!-- Section: More Resources -->
-    <section id="more">
-      <h2>More Resources</h2>
+    <section id="more" class="fade-in-section">
+      <h2>
+        <img
+          src="images/benefits-icon.png"
+          alt="Resources icon"
+          class="section-icon"
+        />
+        More Resources
+      </h2>
       <ul class="resource-list">
-        <li><a href="https://www.epa.gov/recycle" target="_blank">EPA: Recycling Basics</a></li>
-        <li><a href="https://www.recyclingpartnership.org" target="_blank">The Recycling Partnership</a></li>
-        <li><a href="https://www.earth911.com" target="_blank">Earth911 Recycling Search</a></li>
-        <li><a href="https://www.keepamericabeautiful.org" target="_blank">Keep America Beautiful</a></li>
+        <li>
+          <a href="https://www.epa.gov/recycle" target="_blank"
+            >EPA: Recycling Basics</a
+          >
+        </li>
+        <li>
+          <a href="https://www.recyclingpartnership.org" target="_blank"
+            >The Recycling Partnership</a
+          >
+        </li>
+        <li>
+          <a href="https://www.earth911.com" target="_blank"
+            >Earth911 Recycling Search</a
+          >
+        </li>
+        <li>
+          <a href="https://www.keepamericabeautiful.org" target="_blank"
+            >Keep America Beautiful</a
+          >
+        </li>
       </ul>
+    </section>
+
+    <!-- Section: FAQ Accordion -->
+    <section id="faq" class="section-accent fade-in-section">
+      <h2>
+        <img
+          src="images/faq-icon.png"
+          alt="FAQ icon"
+          class="section-icon"
+        />
+        FAQ
+      </h2>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          What items go into the recycling bin?
+        </button>
+        <div class="accordion-content">
+          <p>
+            Most curbside programs accept aluminum cans, steel/tin cans, paper,
+            cardboard, and certain plastics (check the number on the bottom).
+            Glass bottles and jars are often recyclable too. Always check your
+            local guidelines for specifics.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          Why can’t all plastics be recycled?
+        </button>
+        <div class="accordion-content">
+          <p>
+            Not all plastics are created equal. Some plastics (like #1 PET and
+            #2 HDPE) are widely accepted, while others (#3–#7) often require
+            specialized facilities. Mixed‐material containers (e.g., certain
+            juice boxes) can’t be processed easily by some recycling centers.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          How often should I rinse my cans?
+        </button>
+        <div class="accordion-content">
+          <p>
+            A quick rinse is usually enough—just swirl some water around to
+            remove leftover residue. That keeps your bin from smelling and makes
+            the sorting process smoother at the recycling facility.
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
+  <!-- Footer with small decorative leaf image -->
+  <footer class="fade-in-section">
+    <img
+      src="images/footer-leaf.png"
+      alt="Leaf icon"
+      class="footer-icon"
+    />
     <p>
       This site explains why recycling matters, what good it does, and how you
       can easily recycle your own cans. Feel free to share and spread the word!
+    </p>
+
+  </footer>
+
+  <!-- Back-to-Top Button -->
+  <button id="back-to-top">↑ Top</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
