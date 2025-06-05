@@ -1,0 +1,195 @@
+/*------------------------------------------------------
+  1. CSS Variables (Light mode vs Dark mode)
+-------------------------------------------------------*/
+:root {
+  /* Light-mode colors */
+  --bg-color: #f9f9f9;
+  --text-color: #333333;
+  --header-bg: #2d6a4f;
+  --header-text: #ffffff;
+  --section-bg: #ffffff;
+  --accent-light: #d8f3dc;
+  --accent-dark: #95d5b2;
+  --link-color: #2d6a4f;
+  --button-bg: #ffffff;
+  --button-text: #2d6a4f;
+  --button-border: #2d6a4f;
+}
+
+body.dark-mode {
+  /* Dark-mode overrides */
+  --bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --header-bg: #1b4332;
+  --header-text: #e0e0e0;
+  --section-bg: #2a2a2a;
+  --accent-light: #2d6a4f;
+  --accent-dark: #1b4332;
+  --link-color: #8ac6a0;
+  --button-bg: #1b4332;
+  --button-text: #e0e0e0;
+  --button-border: #e0e0e0;
+}
+
+/*------------------------------------------------------
+  2. Base Styles
+-------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/*------------------------------------------------------
+  3. Light/Dark Toggle Button
+-------------------------------------------------------*/
+.theme-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+#theme-toggle {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 2px solid var(--button-border);
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+#theme-toggle:hover {
+  background-color: var(--accent-light);
+}
+
+/*------------------------------------------------------
+  4. Header & Navigation
+-------------------------------------------------------*/
+header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--accent-light);
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  border-radius: 8px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: var(--header-text);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--header-text);
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: var(--accent-dark);
+}
+
+/*------------------------------------------------------
+  5. Section Styling
+-------------------------------------------------------*/
+section {
+  background-color: var(--section-bg);
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+}
+
+/* Accent background on alternating sections */
+.section-accent {
+  background-color: var(--accent-light);
+}
+
+/* Section headings */
+h2 {
+  margin-bottom: 15px;
+  color: var(--link-color);
+  font-size: 1.8rem;
+}
+
+/* Sub-headings within columns */
+h3 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: var(--link-color);
+  font-size: 1.2rem;
+}
+
+/* Paragraphs inside sections */
+section p {
+  margin-bottom: 12px;
+}
+
+/*------------------------------------------------------
+  6. Two-Column List (Benefits)
+-------------------------------------------------------*/
+.two-column-list {
+  column-count: 2;
+  column-gap: 20px;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.two-column-list li {
+  margin-bottom: 10px;
+}
+
+/*------------------------------------------------------
+  7. Grid Two-Cols (Ways to Recycle)
+-------------------------------------------------------*/
+.grid-two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.grid-two-cols p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/*------------------------------------------------------
+  8. Resource Links
+-------------------------------------------------------*/
+.resource-list {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.resource-list li {
+  margin-bottom: 10px;
+}
+
+.resource-list a {
+  color: var(--link-color);
+  t
